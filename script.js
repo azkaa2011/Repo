@@ -165,16 +165,16 @@ function berjatuhan() {
     heart.innerHTML = "<p class='line spin' style='opacity:.1;z-index:100;font-size:13px'>💧</p>";
     heart.className = "heart-icon";
     heart.style.left = (Math.random() * 100) + "vw";
-    heart.style.animationDuration = (Math.random() * 0.8) + 0.8 + "s";
+    heart.style.animationDuration = (Math.random() * 0.9) + 0.9 + "s";
     document.body.appendChild(heart);
 }
 
 setInterval(function () {
     var heartArr = document.querySelectorAll(".heart-icon");
-    if (heartArr.length > 300) {
+    if (heartArr.length > 100) {
       heartArr[0].remove();
     }
-}, 300);
+}, 100);
 
  document.addEventListener("DOMContentLoaded", function () {
   const today = new Date();
