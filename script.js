@@ -141,7 +141,7 @@ const swals = Swal.mixin({
   wallpaper.style="transform: scale(1.5);";
   fthilang();ftganti=4;setTimeout(ftmuncul,300);
   new TypeIt("#pesan6", {
-  strings: ["" + vketik6], startDelay: 1, speed: 50, cursor: false, waitUntilVisible: true, lifelike: true,
+  strings: ["" + vketik6], startDelay: 1, speed: 65, cursor: false, waitUntilVisible: true, lifelike: true,
   afterComplete: function(){
     pesan6.innerHTML=vketik6;
     setInterval(berjatuhan, 80);
