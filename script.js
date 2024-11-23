@@ -165,7 +165,7 @@ function berjatuhan() {
     heart.innerHTML = "<p class='line spin' style='opacity:.1;z-index:100;font-size:13px'>💧</p>";
     heart.className = "heart-icon";
     heart.style.left = (Math.random() * 100) + "vw";
-    heart.style.animationDuration = (Math.random() * 1) + 0.6 + "s";
+    heart.style.animationDuration = (Math.random() * 0.8) + 0.8 + "s";
     document.body.appendChild(heart);
 }
 
