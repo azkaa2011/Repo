@@ -144,7 +144,7 @@ const swals = Swal.mixin({
   strings: ["" + vketik6], startDelay: 1, speed: 50, cursor: false, waitUntilVisible: true, lifelike: true,
   afterComplete: function(){
     pesan6.innerHTML=vketik6;
-    setInterval(berjatuhan, 50);
+    setInterval(berjatuhan, 80);
   },}).go();
   }
 
