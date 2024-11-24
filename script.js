@@ -35,7 +35,6 @@ const swals = Swal.mixin({
       document.getElementById('loveIn').innerHTML = '<a href="#" class="lovein">&#10084;</a>';
     }
   }
-  
   async function inipesan() {
     var { value: nama } = await swals.fire({
         title: 'Masukin Nama Kamu 🫣', 
@@ -46,8 +45,19 @@ const swals = Swal.mixin({
             autocorrect: 'off',
             spellcheck: 'false',
             autocomplete: 'off'
+        },
+        didOpen: () => {
+            // Menambahkan event listener untuk tombol Enter
+            const inputElement = document.querySelector('.swal2-input');
+            inputElement.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    // Memicu tombol konfirmasi saat tombol Enter ditekan
+                    swals.clickConfirm();
+                }
+            });
         }
     });
+
     if (nama && nama.trim().length < 11) { // Validasi nama dengan .trim()
         window.nama = nama.trim(); // Hilangkan spasi di awal/akhir
         vketikutama = "Alooo, " + nama + " ✨";
@@ -57,7 +67,7 @@ const swals = Swal.mixin({
         await swals.fire('Ups!', 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!');
         inipesan(); // Panggil ulang fungsi jika input tidak valid
     }
-}
+  }
   
  
 
